@@ -1,0 +1,9 @@
+diff -urN admin.orig/daemontools-0.76/src/svscanboot.sh admin/daemontools-0.76/src/svscanboot.sh
+--- admin.orig/daemontools-0.76/src/svscanboot.sh	Thu Jul 12 17:49:49 2001
++++ admin/daemontools-0.76/src/svscanboot.sh	Mon May 20 11:33:28 2002
+@@ -1,4 +1,4 @@
+ 
+-PATH=/command:/usr/local/bin:/usr/local/sbin:/bin:/sbin:/usr/bin:/usr/sbin:/usr/X11R6/bin
++PATH=/usr/local/bin:/usr/local/bin:/usr/local/sbin:/bin:/sbin:/usr/bin:/usr/sbin:/usr/X11R6/bin
+ 
+ exec </dev/null
