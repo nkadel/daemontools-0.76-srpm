@@ -1,10 +1,10 @@
 Summary:	Dan Bernstiens Daemon manager
 Name:		daemontools
 Version:	0.76
-Release:	0.1%{?dist}
+Release:	0.2%{?dist}
 License:	Public Domain
 Group:		Applications/System
-URL:		http://cryp.to/daemontools.html
+URL:		http://cr.yp.to/daemontools.html
 Source0:	daemontools-%{version}.tar.gz
 Source1:	svscanboot.conf
 Patch1:		daemontools-ECSC1.diff
@@ -51,8 +51,12 @@ rm -rf $RPM_BUILD_ROOT
 %{_bindir}/*
 
 %changelog
-* Wed Jan 25 2012 Nico Kadel-Garcia <nkadel@gmail.com>
+* Fri Feb 22 2013 Nico Kadel-Garcia <nkadel@gmail.com> 0.76-0.2
+* Correct URL in .spec file
+
+* Wed Jan 25 2012 Nico Kadel-Garcia <nkadel@gmail.com> 0.76-0.1
 - Use bindir, not hardcoded /usr/local/bin
+- Rollback version name to avoid repoforge or other conflicts
 
 * Thu May 19 2005 Matthew Hall <matt@ecsc.co.uk> 0.76-1.fh2
 - Rebuild for FireHat 2
