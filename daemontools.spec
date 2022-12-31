@@ -1,15 +1,21 @@
+# daemontools does not provide debug data
+%global debug_package %{nil}
+
 Summary:	Dan Bernstiens Daemon manager
 Name:		daemontools
 Version:	0.76
-Release:	0.2%{?dist}
+Release:	0.3%{?dist}
 License:	Public Domain
 Group:		Applications/System
 URL:		http://cr.yp.to/daemontools.html
-Source0:	daemontools-%{version}.tar.gz
+Source0:        http://cr.yp.to/daemontools/daemontools-%{version}.tar.gz
 Source1:	svscanboot.conf
 Patch1:		daemontools-ECSC1.diff
 Patch2:		daemontools-0.76.errno.patch
 Buildroot:	%{_tmppath}/%{name}-%{version}-root
+BuildRequires:  make
+BuildRequires:  gcc
+
 # Needed for initctl
 Requires:	initscripts >= 8.76
 
@@ -51,6 +57,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_bindir}/*
 
 %changelog
+* Sat Dec 31 2022 Nico Kadel-Garcia <nkadel@gmail.com> 0.76-0.3
+- Disable debuginfo package, daemontools is compiled statically
+
 * Fri Feb 22 2013 Nico Kadel-Garcia <nkadel@gmail.com> 0.76-0.2
 * Correct URL in .spec file
 
