@@ -73,6 +73,7 @@ rm -rf $RPM_BUILD_ROOT
 %changelog
 * Sat Dec 31 2022 Nico Kadel-Garcia <nkadel@gmail.com> 0.76-0.3
 - Disable debuginfo package, daemontools is compiled statically
+- Treat chksgr error as warning, not error, to allow compilation with "mock"
 
 * Fri Feb 22 2013 Nico Kadel-Garcia <nkadel@gmail.com> 0.76-0.2
 * Correct URL in .spec file
